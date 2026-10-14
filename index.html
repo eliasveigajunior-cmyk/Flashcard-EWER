@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards de Cultura Geral</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Desafio de Cultura Geral</h1>
+    <p>Clique no card para revelar a resposta e registre seu desempenho</p>
+  </header>
+
+  <main class="quiz-container">
+    
+    <!-- Painel de Pontuação -->
+    <div class="score-board">
+      <div class="score-item success">Acertos: <span id="correct-count">0</span></div>
+      <div class="score-item danger">Erros: <span id="wrong-count">0</span></div>
+      <div class="score-item remaining">Restantes: <span id="remaining-count">0</span></div>
+    </div>
+
+    <!-- Barra de Progresso -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Container do Card -->
+    <div class="card-area">
+      <div class="flashcard" id="flashcard">
+        <div class="card-inner">
+          <div class="card-front">
+            <span class="category-tag" id="card-category">Categoria</span>
+            <p id="card-question">Carregando pergunta...</p>
+            <span class="hint-text">💡 Clique para ver a resposta</span>
+          </div>
+          <div class="card-back">
+            <h3>Resposta:</h3>
+            <p id="card-answer">Carregando resposta...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões de Ação -->
+    <div class="controls">
+      <button class="btn btn-wrong" id="btn-wrong" disabled>❌ Errei</button>
+      <button class="btn btn-correct" id="btn-correct" disabled>✅ Acertei</button>
+    </div>
+
+    <!-- Tela de Conclusão (Oculta por padrão) -->
+    <div class="result-screen hidden" id="result-screen">
+      <h2>🎉 Parabéns! Você concluiu o deck!</h2>
+      <p id="final-score"></p>
+      <button class="btn btn-restart" id="btn-restart">Reiniciar Estudo</button>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
